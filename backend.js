@@ -9,30 +9,49 @@ app.use(methodOverride('_method'));
 
 /////DATABASE
 let data = {
-	"payer": String,
-	"points": Number,
-	"timestamp": String,
+	"payer": {
+		"id": 1,
+		"name": "Sam"
+	},
+	"points": {
+		"payerId":1,
+		"points":250
+	},
+	"timestamp": {
+		"actionTime": "2022-01-10"
+	}
 }
+
+const payerPoints = []
 
 ////// FUNCTIONS
 //A function that houses payers current points and can be called back to by other routes.
-function getPayerPoints(){
-	//return list of payers and points
+const getAllPayerPoints =()=>{
+
+	//a list to hold payers point data
+
+	//loop through data, push data to payerPoints array
+
+	//return payerPoints array
+
+	return data.payer
+	return data.points 
+		
 }
 
 //A function that edits specific payer and date.
-function addPayerPoints(){
+const addPayerPoints=()=>{
 	//edits specific payer and date
 }
 //A function that allows payer to spend points.
-function spendPayerPoints(){
+const spendPayerPoints=()=>{
 	//spends specific payer's points.
 }
 /////// ROUTES
 
 //INDEX
 //Return all payer point balances
-app.get('/getPayerPoints')
+app.get('/getAllPayerPoints')
 
 //EDIT
 // Add transactions for specific payer and date.
